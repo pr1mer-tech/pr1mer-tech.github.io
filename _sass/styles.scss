@@ -1,9 +1,9 @@
 :root {
     color-scheme: light dark;
-    --text-color: #111;
+    --text-color: #000;
     --footer: #fafafa;
     --white: white;
-    --opposite: #111;
+    --opposite: #000;
     --semi-white: #eee;
 }
 
@@ -15,10 +15,21 @@
         --opposite: #fff;
         --semi-white: #333;
     }
+
     .logo {
         background: url("../img/logo-white.svg") !important;
         background-size: contain !important;
     }
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    // margin-bottom: 300px;
+    background: var(--white);
+    overflow-x: hidden;
 }
 
 header {
@@ -28,6 +39,7 @@ header {
     background: var(--white);
     width: 100vw;
     height: 100vh;
+
     .hero {
         display: flex;
         justify-content: center;
@@ -54,6 +66,67 @@ header {
             font-size: 64px;
             line-height: 76px;
             color: var(--text-color);
+        }
+    }
+}
+
+article {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        background: var(--white);
+        width: 100vw;
+        height: 100vh;
+
+        &.pole {
+            .left {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 60vh;
+                width: 40vw;
+
+                h1 {
+                    font-family: "Airbnb Cereal App";
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 288px;
+                    line-height: 375px;
+                    margin: 0;
+                    color: var(--text-color)
+                }
+
+                p {
+                    font-family: SF Pro Display;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 48px;
+                    line-height: 57px;
+                    color: #777777;
+
+                    .black {
+                        color: var(--text-color)
+                    }
+                }
+            }
+
+            .right {
+                width: 30vw;
+                height: 70vh;
+                background: url("../img/pole.jpg");
+                background-size: cover;
+            }
         }
     }
 }
