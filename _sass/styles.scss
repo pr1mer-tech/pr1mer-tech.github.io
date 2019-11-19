@@ -87,6 +87,7 @@ article {
         background: var(--white);
         width: 100vw;
         height: 100vh;
+        color: var(--text-color);
 
         &.pole {
             .left {
@@ -104,7 +105,6 @@ article {
                     font-size: 288px;
                     line-height: 375px;
                     margin: 0;
-                    color: var(--text-color)
                 }
 
                 p {
@@ -126,6 +126,74 @@ article {
                 height: 70vh;
                 background: url("../img/pole.jpg");
                 background-size: cover;
+                background-position: center;
+            }
+        }
+
+        &.connection {
+            .left {
+                width: 50vw;
+                height: 100vh;
+                background: url("../img/team.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+
+            .right {
+                width: 50vw;
+                height: 100vh;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+
+                h1 {
+                    font-family: "Airbnb Cereal App";
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 72px;
+                    line-height: 94px;
+                    margin: 0;
+                }
+
+                p {
+                    font-family: SF Pro Display;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 48px;
+                    line-height: 57px;
+                    color: #777777;
+                    text-align: center;
+
+                    .black {
+                        color: var(--text-color)
+                    }
+                }
+            }
+        }
+
+        &.smarter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h1 {
+                width: calc(100vw - 50px);
+                max-width: 870px;
+                font-family: "Airbnb Cereal App";
+                font-style: normal;
+                font-weight: bold;
+                font-size: 72px;
+                line-height: 94px;
+                text-align: center;
+            }
+            .img {
+                width: 100vw;
+                height: 100vh;
+                background: url("../img/lonely.jpg");
+                background-size: cover; 
+                background-position: center;
             }
         }
     }
