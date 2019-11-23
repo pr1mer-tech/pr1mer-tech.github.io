@@ -198,3 +198,50 @@ article {
         }
     }
 }
+// Media Queries
+
+@media (max-width: 740px) {
+    h1.title {
+        font-size: 48px !important;
+    }
+    article {
+        section {
+            h1 {
+                font-size: 38px !important;
+                line-height: 56px !important;
+            }
+            &.pole {
+                .left {
+                    width: calc(100vw - 20px);
+                    height: 50vh;
+                    h1 {
+                        font-size: 72px !important;
+                    }
+                    p {
+                        font-size: 28px;
+                    }
+                }
+                .right {
+                    width: calc(100vw - 20px);
+                    height: 50vh;
+                }
+                flex-direction: column;
+            }
+            &.connection {
+                margin-top: 30px;
+                .right {
+                    width: calc(100vw - 20px);
+                    height: 50vh;
+                    p {
+                        font-size: 28px;
+                    }
+                }
+                .left {
+                    width: 100vw;
+                    height: 50vh;
+                }
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
