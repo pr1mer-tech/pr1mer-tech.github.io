@@ -1,0 +1,22 @@
+- name: Lunar Icons
+  class: lunar
+  link: https://lunar.pr1mer.tech/
+  desc: a set of beautiful handcrafted SVG icons.
+  logo: https://lunar.pr1mer.tech/img/white/logo-header.svg
+  color: white
+  background: '#4e54bf'
+
+- name: Waffle Grid
+  class: waffle
+  link: https://waffle.pr1mer.tech/
+  desc: an easy to use flexbox grid system.
+  logo: https://waffle.pr1mer.tech/img/waffle-logo-white.svg
+  color: white
+  background: '#ffb448'
+- name: Euclid Calculator
+  class: euclid
+  link: https://euclid.pr1mer.tech
+  desc: the modern calculator for macOS/iOS
+  logo: https://euclid.pr1mer.tech/img/hero-macbook@2x.png
+  color: black
+  background: white

@@ -16,7 +16,7 @@ description: We connect and help developers around the globe
             <h1>#1</h1>
             <p>
                 <span class="black">Number one by name, number one by nature.</span>
-                We support people and projects that succeed.
+                We create and support creative projects that succeed.
             </p>
         </div>
         <div class="right"></div>
@@ -24,14 +24,26 @@ description: We connect and help developers around the globe
     <section class="connection">
         <div class="left"></div>
         <div class="right">
-            <h1>Connecting people</h1>
+            <h1>Creative rethinking</h1>
             <p>
-                <span class="black">We help</span> individuals, small teams shaping the future by giving them <span class="black">ressources</span>, <span class="black">contacts</span> and <span class="black">ideas</span>.
+                <span class="black">We believe that an idea can change everything</span>, if properly heard. We are constantly <span class="black">challenging ourselves</span> to provide the best services to our users.
             </p>
         </div>
     </section>
     <section class="smarter">
-        <h1>Stop working by yourself, start working smarter</h1>
-        <div class="img"></div>
+        <h1>Discover our world.</h1>
+        <div class="grid">
+            {% for i in site.data.projects %}
+            <a href="{{ i.link }}" class="item" style="color: {{ i.color }}; background: {{ i.background }}">
+                <img class="{{ i.class }}" src="{{ i.logo }}" alt="{{ i.name }}">
+                <h2>
+                    {{ i.name }}
+                </h2>
+                <p>
+                    {{ i.name }} is {{ i.desc }}
+                </p>
+            </a>
+            {% endfor %}
+        </div>
     </section>
 </article>

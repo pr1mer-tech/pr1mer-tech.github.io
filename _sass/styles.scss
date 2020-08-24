@@ -30,6 +30,8 @@ body {
     // margin-bottom: 300px;
     background: var(--white);
     overflow-x: hidden;
+    font-family: SF Pro Display;
+    font-style: normal;
 }
 
 header {
@@ -173,14 +175,9 @@ article {
         }
 
         &.smarter {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
+            display: block;
             h1 {
-                width: calc(100vw - 50px);
-                max-width: 870px;
+                padding: 150px 0;
                 font-family: "Airbnb Cereal App";
                 font-style: normal;
                 font-weight: bold;
@@ -188,19 +185,72 @@ article {
                 line-height: 94px;
                 text-align: center;
             }
-            .img {
-                width: 100vw;
+
+            .grid {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                flex-wrap: wrap;
                 height: 100vh;
-                background: url("../img/lonely.jpg");
-                background-size: cover; 
-                background-position: center;
+        
+                .item {
+                    height: 50vh;
+                    min-height: 300px;
+                    width: 50vw;
+                    padding: 50px;
+                    min-width: 500px;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-size: cover;
+                    text-align: center;
+                    text-decoration: none;
+
+                    h2 {
+                        margin-top: 20px;
+                    }
+        
+                    p {
+                        margin-top: -24px;
+                    }
+        
+                    img {
+                        width: 100px;
+                        // height: 100px;
+                        // filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+
+                        &.euclid {
+                            width: 50%;
+                        }
+                    }
+
+                    h2,
+                    img,
+                    p {
+                        transition: all 100ms ease-in-out;
+                    }
+        
+                    &:hover {
+                        text-decoration: none;
+        
+                        h2,
+                        img,
+                        p {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
             }
         }
     }
 }
 // Media Queries
 
-@media (max-width: 740px) {
+@media (max-width: 940px) {
     h1.title {
         font-size: 48px !important;
     }
@@ -241,6 +291,13 @@ article {
                     height: 50vh;
                 }
                 flex-direction: column-reverse;
+            }
+
+            &.smarter .grid {
+                flex-direction: row;
+                .item {
+                    width: 100vw;
+                }
             }
         }
     }
